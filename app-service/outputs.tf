@@ -1,7 +1,7 @@
 output "app_service_name" {
-  value = "${azurerm_app_service.test.name}"
+  value = "${azurerm_app_service.zerobigtest.app_service_name}"
 }
 
 output "app_service_default_hostname" {
-  value = "https://${azurerm_app_service.test.default_site_hostname}"
+  value = "https://${azurerm_app_service.zerobigtest.app_service_default_hostname}"
 }
