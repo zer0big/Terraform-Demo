@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "test" {
-  name     = "example-resources"
-  location = "West Europe"
+  name     = "terraform-resource-group"
+  location = "Korea Central"
 }
 
 resource "azurerm_app_service_plan" "test" {
@@ -14,8 +14,8 @@ resource "azurerm_app_service_plan" "test" {
   }
 }
 
-resource "azurerm_app_service" "test" {
-  name                = "terraform-app-service"
+resource "azurerm_app_service" "zerobigtest" {
+  name                = "${var.app-service-name}"
   location            = "${azurerm_resource_group.test.location}"
   resource_group_name = "${azurerm_resource_group.test.name}"
   app_service_plan_id = "${azurerm_app_service_plan.test.id}"
@@ -41,8 +41,8 @@ resource "azurerm_sql_server" "test" {
   resource_group_name          = "${azurerm_resource_group.test.name}"
   location                     = "${azurerm_resource_group.test.location}"
   version                      = "12.0"
-  administrator_login          = "houssem"
-  administrator_login_password = "4-v3ry-53cr37-p455w0rd"
+  administrator_login          = "zerobig"
+  administrator_login_password = "Pa$$w0rd"
 }
 
 resource "azurerm_sql_database" "test" {
