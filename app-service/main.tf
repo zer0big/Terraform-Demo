@@ -14,7 +14,7 @@ resource "azurerm_app_service_plan" "test" {
   }
 }
 
-resource "azurerm_app_service" "test" {
+resource "azurerm_app_service" "zerobigtest" {
   name                = "terraform-app-service"
   location            = "${azurerm_resource_group.test.location}"
   resource_group_name = "${azurerm_resource_group.test.name}"
