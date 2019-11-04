@@ -37,12 +37,12 @@ resource "azurerm_app_service" "test" {
 }
 
 resource "azurerm_sql_server" "test" {
-  name                         = "terraform-sqlserver"
+  name                         = "zerobig-terraform-sqlserver"
   resource_group_name          = "${azurerm_resource_group.test.name}"
   location                     = "${azurerm_resource_group.test.location}"
   version                      = "12.0"
   administrator_login          = "zerobig"
-  administrator_login_password = "Pa$$w0rd"
+  administrator_login_password = "dixxjfljkdjfixxxxxxlk--asdfjdasfxxx--jaksd@#$#ADFGARew"
 }
 
 resource "azurerm_sql_database" "test" {
